@@ -1,82 +1,45 @@
-\# Retinal OCT Disease Classification Using Transfer Learning
+# Retinal OCT Disease Classification Using Transfer Learning
 
+This project develops a deep learning pipeline for retinal Optical Coherence Tomography (OCT) disease classification. The goal is to classify OCT B-scan images into four categories: CNV, DME, DRUSEN, and NORMAL using transfer learning models.
 
+The project was designed as a practical AI-based ophthalmology workflow, including OCT image preprocessing, class imbalance handling, model benchmarking, performance evaluation, and explainability using Grad-CAM.
 
-This project develops a retinal OCT disease classification pipeline using transfer learning to classify OCT B-scan images into CNV, DME, DRUSEN, and NORMAL categories.
+## Project Motivation
 
+Retinal OCT imaging is widely used in ophthalmology to assess retinal disease patterns. This project demonstrates how transfer learning can be applied to OCT image classification and evaluated using clinically relevant metrics such as class-wise recall, macro-F1 score, ROC-AUC, and confusion matrix analysis.
 
+## Dataset
 
-\## Models
+The dataset is not included in this repository due to size.
 
-\- MobileNetV2
+Dataset used: **Retinal OCT Images / OCT2017**  
+Kaggle dataset: `paultimothymooney/kermany2018`
 
-\- EfficientNetB0
+The dataset contains OCT images organized into the following classes:
 
+- CNV
+- DME
+- DRUSEN
+- NORMAL
 
-
-\## Methods
-
-\- OCT image preprocessing
-
-\- Transfer learning
-
-\- Data augmentation
-
-\- Class-weighted loss for imbalance handling
-
-\- Model evaluation using accuracy, macro-F1, precision, recall, ROC-AUC, and confusion matrix
-
-\- Grad-CAM explainability for model interpretation
-
-
-
-\## Results
-
-
-
-| Model | Accuracy | Macro-F1 | ROC-AUC |
-
-|---|---:|---:|---:|
-
-| MobileNetV2 | 81.9% | 82% | 97.2% |
-
-| EfficientNetB0 | 83.7% | 84% | 97.6% |
-
-
-
-EfficientNetB0 achieved the best overall performance and was selected for Grad-CAM explainability analysis.
-
-
-
-\## Dataset
-
-
-
-The dataset is not included in this repository due to size.  
-
-Download the OCT2017 dataset from Kaggle:
-
-
-
-`paultimothymooney/kermany2018`
-
-
-
-Expected local structure:
-
-
+Expected local folder structure:
 
 ```text
-
 data/
-
-&#x20; OCT2017/
-
-&#x20;   OCT2017/
-
-&#x20;     train/
-
-&#x20;     test/
-
-&#x20;     val/
-
+  OCT2017/
+    OCT2017/
+      train/
+        CNV/
+        DME/
+        DRUSEN/
+        NORMAL/
+      test/
+        CNV/
+        DME/
+        DRUSEN/
+        NORMAL/
+      val/
+        CNV/
+        DME/
+        DRUSEN/
+        NORMAL/
